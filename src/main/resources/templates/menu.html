@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout::head">
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+
+<body >
+	<nav th:replace="layout::menu"></nav>
+	
+	
+	<section id="hero">
+			
+		<div class="container2">
+			<div class="content-center ">
+				<h1>Constructora PROMET</h1>
+				<p>¡Nuestro compromiso es hacer las cosas bien!</p>
+				<br>
+			</div>
+		</div>
+		<div class="slider">
+			<div class="container">
+				<img src="/img/techado.jpg" alt="" >
+				<img src="/img/techado2.jpg" alt="" > 
+				<img src="/img/construccion5.jpeg" alt="" > 
+				<img src="/img/techado4.jpg" alt="" > 
+			</div>
+		</div>
+	</section>
+	<section id="portafolio">
+		<div class="container-fluid">
+			<div class="content-center">
+				<h2>
+					<b>Proyectos llave en mano</b>
+				</h2>
+				<p>Es la unidad de negocio dedicada al desarrollo integral de
+					proyectos de infraestructura EPC tales como: Campamentos de
+					operación y construcción, alojamientos, oficinas, comedores, etc.
+					Desde su conceptualización hasta la entrega llave en mano,
+					complementado con las siguientes actividades:</p>
+			</div>
+		</div>
+	</section>
+<script type="text/javascript"
+	th:src="@{/script/jsweb/eventos/main.js}"></script>
+</body>
+</html>

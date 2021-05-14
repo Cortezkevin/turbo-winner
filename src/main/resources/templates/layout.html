@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="head">
+<meta charset="UTF-8">
+<title th:text="${titulo}"></title>
+<script type="text/javascript"
+	th:src="@{/script/jquery/jQuery_v3.6.0.js}"></script>
+<script type="text/javascript"
+	th:src="@{/script/bootstrap/bootstrap.bundle.js}"></script>
+<link rel="stylesheet" th:href="@{/css/bootstrap/bootstrap.css}">
+<link rel="stylesheet" href="css/css/style.css">
+
+<link
+	href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css"
+	rel="stylesheet">
+<!-- icons -->
+<link rel="stylesheet"
+	href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+	integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+	crossorigin="anonymous">
+
+</head>
+<body>
+
+	<nav th:fragment="menu"
+		class="navbar navbar-expand-lg navbar-dark bg-dark">
+		<a class="navbar-brand" href="#">Constructora</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse"
+			data-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent" aria-expanded="false"
+			aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item active"><a class="nav-link"
+					th:href="@{/Home}">Home <span class="sr-only">(current)</span>
+				</a></li>
+				<li class="nav-item dropdown"><a
+					class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+					role="button" data-toggle="dropdown" aria-haspopup="true"
+					aria-expanded="false"> Contactanos </a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<a class="dropdown-item" th:href="@{/Contactanos/Contacto}"><i
+							class="fas fa-paper-plane"></i> Consultas</a> <a
+							class="dropdown-item" th:href="@{/Contactanos/ListaConsultas}"><i
+							class="fas fa-clipboard-list"></i> Lista Consultas</a>
+						<div class="dropdown-divider"></div>
+					</div></li>
+				<li class="nav-item dropdown"><a
+					class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+					role="button" data-toggle="dropdown" aria-haspopup="true"
+					aria-expanded="false"> Proyectos </a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<a class="dropdown-item" th:href="@{/Proyectos/Proyecto}"><i
+							class="fas fa-folder-plus"></i> Registrar Proyecto</a> <a
+							class="dropdown-item" th:href="@{/Proyectos/ListaProyecto}"><i
+							class="fas fa-clipboard-list"></i> Listar Proyectos</a>
+						<div class="dropdown-divider"></div>
+					</div></li>
+				<li class="nav-item dropdown"><a
+					class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+					role="button" data-toggle="dropdown" aria-haspopup="true"
+					aria-expanded="false"> Proformas </a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<a class="dropdown-item" th:href="@{/Proformas/Proforma}"><i
+							class="fab fa-wpforms"></i> Registrar Proforma</a> <a
+							class="dropdown-item" th:href="@{/Proformas/ListaProformas}"><i
+							class="fas fa-clipboard-list"></i> Listar Proformas</a>
+						<div class="dropdown-divider"></div>
+					</div></li>
+			</ul>
+		</div>
+	</nav>
+</body>
+</html>

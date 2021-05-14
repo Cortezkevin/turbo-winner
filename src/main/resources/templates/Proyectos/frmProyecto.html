@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout::head">
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<nav th:replace="layout::menu"></nav>
+	<br>
+	<div class="container1">
+		<div class="row">
+			<div class="col-sm"></div>
+			<div class="col-lg">
+
+				<div class="card">
+					<h5 class="card-header">Proyectos</h5>
+					<div class="card-body">
+
+						<form th:action="@{/Proyectos/Proyecto}"
+							th:object="${proyectoForm}" method="POST">
+							<div class="form-group">
+								<label for="exampleInputEmail1">Nombre del Proyecto</label> <input
+									th:field="*{nombre}" type="text" class="form-control"
+									id="exampleInputEmail1" aria-describedby="emailHelp">
+							</div>
+							<div class="form-group">
+								<label for="exampleInputPassword1">Empresa</label> <input
+									th:field="*{empresa}" type="text" class="form-control"
+									id="exampleInputPassword1">
+							</div>
+							<div class="form-group">
+								<label for="exampleFormControlSelect1">Ubicacion: </label> <select
+									th:field="*{ubicacion}" class="form-control"
+									id="exampleFormControlSelect1">
+									<option th:each="d : ${lstubicaion}"
+										th:value="${d}" th:text="${d}"></option>
+								</select>
+							</div>
+
+							<div class="form-group">
+								<label for="exampleInputPassword1">Area m2</label> <input
+									th:field="*{area}" type="number" class="form-control"
+									id="exampleInputPassword1">
+							</div>
+							<!--  <div class="form-group">
+								<label for="exampleInputPassword1">Monto</label><input
+									th:field="*{monto}" type="number" th:text="${monto}" class="form-control"
+									id="exampleInputPassword1">
+							</div>-->
+							<div class="form-group">
+								<label for="exampleInputPassword1">Fecha Inicio</label> <input
+									th:field="*{fechaInicio}" type="date" class="form-control"
+									id="exampleInputPassword1">
+							</div>
+							<div class="form-group">
+								<label for="exampleFormControlTextarea1">Descripcion</label>
+								<textarea th:field="*{Descripcion}" class="form-control"
+									id="exampleFormControlTextarea1" rows="3"></textarea>
+							</div>
+							<button type="submit" class="btn btn-primary">Enviar</button>
+							<div th:if="${visualizar}" class="alert alert-success"
+								role="alert">
+								<span th:text="${mensaje} ?: ''"></span>
+							</div>
+						</form>
+
+					</div>
+				</div>
+
+
+			</div>
+			<div class="col-sm"></div>
+		</div>
+	</div>
+</body>
+</html>

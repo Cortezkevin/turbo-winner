@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout::head">
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<nav th:replace="layout::menu"></nav>
+<br>
+	<div class="container1">
+		<div class="row">
+			<div class="col-sm"></div>
+			<div class="col-lg">
+
+				<div class="card">
+					<h5 class="card-header">Proformas</h5>
+					<div class="card-body">
+
+						<form th:action="@{/Proformas/Proforma}"
+							th:object="${proformaForm}" method="POST">
+							<div class="form-group">
+								<label for="exampleInputEmail1">Nombre: </label> <input
+									th:field="*{cliente}" type="text" class="form-control"
+									id="exampleInputEmail1" aria-describedby="emailHelp">
+							</div>
+							<div class="form-group">
+								<label for="exampleInputPassword1">Direccion: </label> <input
+									th:field="*{direccion}" type="text" class="form-control"
+									id="exampleInputPassword1">
+							</div>
+							
+							<div class="form-group">
+								<label for="exampleFormControlSelect1">Proyecto: </label> <select
+									th:field="*{nombreProyecto}" class="form-control"
+									id="exampleFormControlSelect1">
+									<option th:each="proyecto : ${proyectos}" th:value="${proyecto.idProyecto}"
+										th:text="${proyecto.nombre}"></option>
+								</select>
+							</div>
+							<div class="form-group">
+								<label for="exampleInputPassword1">Importe</label> <input
+									th:field="*{monto}" disabled th:placeholder="${monto}" type="number" class="form-control"
+									id="exampleInputPassword1">
+							</div>
+							<div class="form-group">
+								<label for="exampleInputPassword1">Pago</label> <input
+									th:field="*{importe}" type="number" class="form-control"
+									id="exampleInputPassword1">
+							</div>
+							<button type="submit" class="btn btn-primary">Enviar</button>
+							<div th:if="${visualizar}" class="alert alert-success"
+								role="alert">
+								<span th:text="${mensaje} ?: ''"></span>
+							</div>
+						</form>
+
+					</div>
+				</div>
+
+
+			</div>
+			<div class="col-sm"></div>
+		</div>
+	</div>
+</body>
+</html>

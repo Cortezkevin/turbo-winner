@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title th:text="${titulo}"></title>
+<script type="text/javascript"
+	th:src="@{/script/jquery/jQuery_v3.6.0.js}"></script>
+<script type="text/javascript"
+	th:src="@{/script/bootstrap/bootstrap.bundle.js}"></script>
+<link rel="stylesheet" th:href="@{/css/bootstrap/bootstrap.css}">
+<!-- estilos -->
+<link rel="stylesheet" href="css/css/style.css">
+<link rel="stylesheet" href="css/css/login.css">
+<link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+
+<!-- icons -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+
+<title>Insert title here</title>
+</head>
+<body>
+<br>
+	<div class="container1">
+		<div class="row">
+			<div class="col-sm"></div>
+			<div class="col-lg">
+
+				<div class="card">
+					<div class="col-12 user-img">
+						<img src="/img/perfil.jpg"/>
+					</div>
+					<div class="card-body">
+
+						<form th:action="@{/Home}"
+							th:object="${usuarioForm}" method="POST">
+							<div class="form-group" id="user-group">
+								<label for="exampleInputEmail1"><i class="fas fa-user"></i> Nombre de Usuario: </label> 
+								<input	th:field="*{nombreUsuario}" type="text" class="form-control"
+									id="exampleInputEmail1" aria-describedby="emailHelp">
+							</div>
+							<div class="form-group" id="contrasena-group">
+								<label for="exampleInputPassword1"><i class="fas fa-lock"></i> Contraseña: </label> <input
+									th:field="*{password}" type="password" class="form-control"
+									id="exampleInputPassword1">
+							</div>
+							<div id="center-btn">
+								<button type="submit" class="btn btn-primary" ><i class="fas fa-sign-in-alt"></i> Ingresar</button>
+							</div>
+							
+							
+							<div class="col-12 forgot" id="new-user">
+								<a th:href="@{/RegistrarUsuario}">Crear Usuario</a>
+							</div>
+							
+							<div th:if="${visualizar}" class="alert alert-danger"
+								role="alert">
+								<span th:text="${mensaje} ?: ''"></span>
+							</div>
+						</form>
+
+					</div>
+				</div>
+
+
+			</div>
+			<div class="col-sm"></div>
+		</div>
+	</div>
+</body>
+</html>

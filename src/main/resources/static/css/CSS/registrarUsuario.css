@@ -1,0 +1,21 @@
+span h2{
+	text-align: center;
+	margin-top: 30px;
+}
+
+#registrar{
+	text-align: center;
+}
+#back{
+	margin-top: 20px;
+	text-align: center;
+}
+img{
+	margin-top: 30px;
+	height: 50px;
+}
+
+h5{
+	text-align: center;
+	color: blue;
+}

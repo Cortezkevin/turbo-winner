@@ -1,0 +1,38 @@
+body{
+	background: url(/../img/imgLogin.jpg) no-repeat center center  fixed;
+	background-size: cover;	
+}
+
+.user-img {
+	margin-top: -50;
+	margin-bottom: 20px;   
+}
+.user-img img{
+	display: block;
+	margin-left: auto;
+	margin-right: auto; 
+	width:150px;
+    height:150px;
+    border-radius:150px;
+    border:10px solid #666;
+}
+
+.container1{
+	margin-top: 50px;
+}
+.card{
+	background-color: #3b4652;
+	opacity: .95;
+	padding: 0 20px;
+	box-shadow: 0px 0px 113px #848484;
+}
+#center-btn{
+	text-align: center;
+	
+}
+#new-user{
+	text-align: center;
+	font-size: 15px;
+}
+
+	

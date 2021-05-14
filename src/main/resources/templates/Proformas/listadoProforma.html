@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout::head">
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<script type="text/javascript"
+	th:src="@{/script/jsweb/proforma/listadoProforma.js}"></script>
+<body>
+	<nav th:replace="layout::menu"></nav>
+	<div class="card">
+		<div class="card-header badge-info">LISTADO DE PROFORMAS</div>
+		<div class="card-body">
+
+			<table class="table">
+				<thead class="thead-dark">
+					<tr>
+						<th scope="col">Codigo</th>
+						<th scope="col">Nombre Cliente</th>
+						<th scope="col">Direccion</th>
+						<th scope="col">ID Proyecto</th>
+						<th scope="col">monto</th>
+						<th scope="col">Importe</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="proforma : ${lstproforma}">
+						<td th:text="${proforma.idProforma}"></td>
+						<td th:text="${proforma.cliente}"></td>
+						<td th:text="${proforma.direccion}"></td>
+						<td th:text="${proforma.nombreProyecto}"></td>
+						<td th:text="${proforma.monto}"></td>
+						<td th:text="${proforma.importe}"></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</body>
+</html>

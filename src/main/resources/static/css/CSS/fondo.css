@@ -1,0 +1,10 @@
+@charset "ISO-8859-1";
+
+body{
+	background: url('img/dubai-construccion.jpg');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center center;
+	background-size: cover;
+	background-size: contain;
+}

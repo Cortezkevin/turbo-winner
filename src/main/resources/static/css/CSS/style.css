@@ -1,0 +1,124 @@
+
+
+body {
+	font-family: 'Titillium Web', sans-serif;
+}
+
+
+h1 {
+	font-size: 66px;
+	font-weight: 600;
+	line-height: 80px;
+	margin-top: -30px;
+}
+
+h2 {
+	font-size: 48px;
+	margin-bottom: 30px;
+}
+
+p {
+	font-size: 18px;
+	color: #999999;
+	line-height: 1.8;
+	margin-bottom: 0;
+}
+
+.container1 {
+	margin-top: 3cm;
+}
+
+.topmargin-sm {
+	margin-top: 30px !important;
+}
+
+.topmargin-xs {
+	margin-top: 15px !important;
+}
+
+.topmargin-lg {
+	margin-top: 100px !important;
+}
+
+section {
+	padding: 120px 0;
+}
+
+.navbar {
+	background-color: #ffffff;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .05);
+	min-height: 100px;
+}
+
+.nav-link {
+	color: #1a1a1a;
+}
+
+.nav-link:hover {
+	color: #1a1a1a;
+}
+
+.logo-brand {
+	min-width: 160px;
+	max-width: 180px;
+}
+
+.navbar-toggler {
+	font-size: 40px;
+}
+
+.navbar-toggler:focus {
+	outline: none
+}
+#hero .slider{
+	margin-top: -70px;
+	width: 600px;
+	overflow: hidden;
+	position: relative;
+	margin-left: 375px;
+	
+}
+
+#hero .slider .container{
+	white-space: nowrap;
+	position: relative;
+	transition: all 0.4s;
+	left: 0;
+	width: 600px;
+	
+}
+#hero .slider .container *{
+	white-space: normal;
+}
+#hero .slider  img{
+	width: 600px;
+	height:330px;
+	display: inline-block;
+	margin-right: -4px;
+	
+}
+	
+#hero {
+	background-image: url(../../img/dubai-construccion.jpg);
+	background-size: cover;
+	padding-top: 90px;
+	min-height: 700px;
+	color: #ffffff;
+}
+
+.content-center {
+	max-width: 800px;
+	margin: 0 auto 60px auto;
+	text-align: center;
+}
+
+#hero p {
+	color: #ffffff;
+}
+
+@media ( min-width : 576px) {
+	h1 {
+		font-size: 40px;
+		line-height: normal
+	}
+}

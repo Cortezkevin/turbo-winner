@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout::head">
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<nav th:replace="layout::menu"></nav>
+	<div class="card">
+		<div class="card-header badge-info">LISTADO DE PROFORMAS</div>
+		<div class="card-body">
+			<table class="table">
+				<thead class="thead-dark">
+					<tr>
+						<th scope="col">Codigo</th>
+						<th scope="col">Usuario</th>
+						<th scope="col">Nombre</th>
+						<th scope="col">Empresa</th>
+						<th scope="col">Ubicacion</th>
+						<th scope="col">Area</th>
+						<th scope="col">Fecha Inicio</th>
+						<th scope="col">Descripcion</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="proyecto : ${lstProyectos}">
+						<td th:text="${proyecto.idProyecto}"></td>
+						<td th:text="${usuario}"></td>
+						<td th:text="${proyecto.nombre}"></td>
+						<td th:text="${proyecto.empresa}"></td>
+						<td th:text="${proyecto.ubicacion}"></td>
+						<td th:text="${proyecto.area}"></td>
+						<td th:text="${proyecto.fechaInicio}"></td>
+						<td th:text="${proyecto.Descripcion}"></td>
+					</tr>
+				</tbody>
+			</table>
+
+		</div>
+	</div>
+</body>
+</html>
